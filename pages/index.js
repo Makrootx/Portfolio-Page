@@ -1,12 +1,18 @@
+import NextLink from 'next/link'
 import {
     Container,
     Box,
     Heading,
     Image,
-    useColorModeValue
+    Link,
+    useColorModeValue,
+    Button
 } from '@chakra-ui/react'
 
 import Section from '../components/section'
+import Paragraph from '../components/paragraph'
+import { ChevronRightIcon } from '@chakra-ui/icons'
+import { BioSection, BioYear } from '../components/bio'
 
 const Page = () => {
     return (
@@ -40,8 +46,13 @@ const Page = () => {
                         maxWidth="100px"
                         display="inline-block"
                         borderRadius="full"
-                        src="/images/myLogo.png"
+                        src="/images/profilePhoto.jpg"
                         alt="Profile Image"
+                        style={{
+                            boxShadow:
+                                '0px 0px 0px 2px' +
+                                useColorModeValue('#00000064', '#B2F5EA89')
+                        }}
                     />
                 </Box>
             </Box>
@@ -49,7 +60,45 @@ const Page = () => {
                 <Heading as="h3" variant="section-title">
                     Works
                 </Heading>
-                <p>Paragraph</p>
+                <Paragraph>
+                    Lorem ipsum is placeholder text commonly used in the
+                    graphic, print, and publishing industries for previewing
+                    layouts and visual mockups.Lorem ipsum is placeholder text
+                    commonly used in the graphic, print, and publishing
+                    industries for previewing layouts and visual mockups named{' '}
+                    <Link href="/works/myWork">Work</Link>.
+                </Paragraph>
+                <Box align="center" my={4}>
+                    <NextLink href="/works">
+                        <Button
+                            rightIcon={<ChevronRightIcon />}
+                            colorScheme="teal"
+                        >
+                            My portfolio
+                        </Button>
+                    </NextLink>
+                </Box>
+            </Section>
+            <Section delay={0.2}>
+                <Heading as="h3" variant="section-title">
+                    Bio
+                </Heading>
+                <BioSection>
+                    <BioYear>2005</BioYear>
+                    Born in Lutsk, Ukraine.
+                </BioSection>
+                <BioSection>
+                    <BioYear>2022</BioYear>
+                    Begined studies in Academi of Biała Podlaska
+                </BioSection>
+            </Section>
+            <Section delay={0.3}>
+                <Heading as="h3" variant="section-title">
+                    Hobbies
+                </Heading>
+                <Paragraph>
+                    I liked sport, programing, guitar, photoshop.
+                </Paragraph>
             </Section>
         </Container>
     )
