@@ -18,16 +18,18 @@ import {
 import { HamburgerIcon } from '@chakra-ui/icons'
 
 import ThemeToggleButton from './theme-toggle-button'
+import { useRouter } from 'next/router'
 
 const LinkItem = ({ href, path, children }) => {
     const active = path === href
     const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
+    const router = useRouter()
     return (
         <Link
             p={2}
             bg={active ? 'glassTeal' : undefined}
             color={active ? '#202023' : inactiveColor}
-            href={href}
+            onClick={() => router.push(href)}
         >
             {children}
         </Link>

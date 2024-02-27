@@ -2,6 +2,7 @@ import NextLink from 'next/link'
 import Image from 'next/image'
 import { Box, Text, LinkBox, LinkOverlay } from '@chakra-ui/react'
 import { Global } from '@emotion/react'
+import { useRouter } from 'next/router'
 
 export const GridItem = ({ children, href, title, thumbnail }) => {
     return (
@@ -25,6 +26,7 @@ export const GridItem = ({ children, href, title, thumbnail }) => {
 }
 
 export const WorkGridItem = ({ children, id, title, thumbnail }) => {
+    const router = useRouter()
     return (
         <Box w="100%" align="center">
             {/* <NextLink href={`/works/${id}`}>
@@ -37,7 +39,7 @@ export const WorkGridItem = ({ children, id, title, thumbnail }) => {
                     className="grid-item-thumbnail"
                     placeholder="blur"
                 />
-                <LinkOverlay href={`/works/${id}`}>
+                <LinkOverlay onClick={() => router.push(`/works/${id}`)}>
                     <Text mt={2} fontSize={20}>
                         {title}
                     </Text>
