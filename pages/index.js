@@ -13,7 +13,7 @@ import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import { BioSection, BioYear } from '../components/bio'
-import Layout from './article'
+import Layout from '../components/layouts/article'
 
 const Page = () => {
     return (

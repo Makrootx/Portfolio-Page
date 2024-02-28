@@ -3,7 +3,7 @@ import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
 import thumbCalculator from '../public/images/projectThumbSample.png'
 import thumbJavaGame from '../public/images/projectThumbSample.png'
-import Layout from './article'
+import Layout from '../components/layouts/article'
 const Works = () => {
     return (
         <Layout>
