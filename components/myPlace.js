@@ -73,7 +73,7 @@ const MyPlace = () => {
 
             const dirLight = new THREE.DirectionalLight(lightColor, 5)
             dirLight.position.set(2, 6, 4)
-            let mapSize = 8192
+            let mapSize = 1024
             let r = 2
             dirLight.castShadow = true
             dirLight.shadow.radius = r
