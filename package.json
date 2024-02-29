@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "next dev -H 0.0.0.0",
-    "build": "next build && rm -rf cache",
+    "build": "next build && rm -rf .next/cache",
     "prettier": "prettier -write .",
     "lint": "next lint"
   },
