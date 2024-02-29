@@ -6,7 +6,11 @@ import {
     Image,
     Link,
     useColorModeValue,
-    Button
+    Button,
+    SimpleGrid,
+    List,
+    ListItem,
+    Icon
 } from '@chakra-ui/react'
 
 import Section from '../components/section'
@@ -14,6 +18,8 @@ import Paragraph from '../components/paragraph'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
+import { IoLogoGithub, IoLogoInstagram, IoLogoFacebook } from 'react-icons/io5'
+import { GridItem } from '../components/grid-item'
 
 const Page = () => {
     return (
@@ -101,6 +107,55 @@ const Page = () => {
                     <Paragraph>
                         I liked sport, programing, guitar, photoshop.
                     </Paragraph>
+                </Section>
+                <Section delay={0.3}>
+                    <Heading as="h3" variant="section-title">
+                        Web Links
+                    </Heading>
+                    <List>
+                        <ListItem>
+                            <Link
+                                href="https://github.com/makrootx"
+                                target="_blank"
+                            >
+                                <Button
+                                    variant="ghost"
+                                    colorScheme="teal"
+                                    leftIcon={<Icon as={IoLogoGithub} />}
+                                >
+                                    @makrootx
+                                </Button>
+                            </Link>
+                        </ListItem>
+                        <ListItem>
+                            <Link
+                                href="https://www.instagram.com/maksum_boiko"
+                                target="_blank"
+                            >
+                                <Button
+                                    variant="ghost"
+                                    colorScheme="teal"
+                                    leftIcon={<Icon as={IoLogoInstagram} />}
+                                >
+                                    @maksum_boiko
+                                </Button>
+                            </Link>
+                        </ListItem>
+                        <ListItem>
+                            <Link
+                                href="https://www.facebook.com/profile.php?id=100009912338526"
+                                target="_blank"
+                            >
+                                <Button
+                                    variant="ghost"
+                                    colorScheme="teal"
+                                    leftIcon={<Icon as={IoLogoFacebook} />}
+                                >
+                                    @Max Boiko
+                                </Button>
+                            </Link>
+                        </ListItem>
+                    </List>
                 </Section>
             </Container>
         </Layout>
