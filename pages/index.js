@@ -7,7 +7,6 @@ import {
     Link,
     useColorModeValue,
     Button,
-    SimpleGrid,
     List,
     ListItem,
     Icon
@@ -19,7 +18,6 @@ import { ChevronRightIcon } from '@chakra-ui/icons'
 import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import { IoLogoGithub, IoLogoInstagram, IoLogoFacebook } from 'react-icons/io5'
-import { GridItem } from '../components/grid-item'
 
 const Page = () => {
     return (
