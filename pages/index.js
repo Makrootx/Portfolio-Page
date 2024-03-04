@@ -12,6 +12,7 @@ import {
     Icon
 } from '@chakra-ui/react'
 
+import { SectionHomepage } from '../components/section'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import { ChevronRightIcon } from '@chakra-ui/icons'
@@ -25,7 +26,7 @@ const Page = () => {
             <Container>
                 <Box
                     borderRadius="lg"
-                    bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+                    bg={'#68D39188'}
                     mb={6}
                     p={3}
                     align="center"
@@ -56,13 +57,13 @@ const Page = () => {
                             alt="Profile Image"
                             style={{
                                 boxShadow:
-                                    '0px 0px 0px 2px' +
-                                    useColorModeValue('#00000064', '#B2F5EA89')
+                                    '0px 0px 8px 2px' +
+                                    useColorModeValue('#00000064', '#B2F5EA77')
                             }}
                         />
                     </Box>
                 </Box>
-                <Section delay={0.1}>
+                <SectionHomepage delay={0.1}>
                     <Heading as="h3" variant="section-title">
                         Works
                     </Heading>
@@ -74,7 +75,7 @@ const Page = () => {
                         industries for previewing layouts and visual mockups
                         named <Link href="/works/myWork">Work</Link>.
                     </Paragraph>
-                    <Box align="center" my={4}>
+                    <Box align="center" mt={4}>
                         <NextLink href="/works">
                             <Button
                                 rightIcon={<ChevronRightIcon />}
@@ -84,7 +85,7 @@ const Page = () => {
                             </Button>
                         </NextLink>
                     </Box>
-                </Section>
+                </SectionHomepage>
                 <Section delay={0.2}>
                     <Heading as="h3" variant="section-title">
                         Bio
