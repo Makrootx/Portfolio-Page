@@ -33,7 +33,7 @@ const MyPlace = () => {
             renderer.setPixelRatio(window.devicePixelRatio)
             renderer.setSize(scW, scH)
         }
-    }, renderer)
+    }, [renderer])
 
     useEffect(() => {
         const { current: container } = refContainer
@@ -84,21 +84,20 @@ const MyPlace = () => {
             controls.autoRotate = true
             controls.target = target
             setControls(controls)
+            renderer.shadowMap.enabled = true
+
+            var isCanvasVisible = true
+            let frame = 0
 
             loadGLTFModel(scene, '/models/myPlaceFinal.glb', {
                 reciveShadow: true,
                 castShadow: true
             }).then(() => {
-                animate()
+                renderer.setAnimationLoop(animate)
                 setLoading(false)
             })
-            renderer.shadowMap.enabled = true
 
-            let req = null
-            let frame = 0
             const animate = () => {
-                req = requestAnimationFrame(animate)
-
                 frame = frame <= 100 ? frame + 1 : frame
                 if (frame <= 100) {
                     const p = initialCameraPosition
@@ -115,8 +114,26 @@ const MyPlace = () => {
                 renderer.render(scene, camera)
             }
 
+            const checkCanvasVisibility = () => {
+                isCanvasVisible = isElementInViewport(container)
+                console.log(isCanvasVisible)
+            }
+
+            const isElementInViewport = el => {
+                const rect = el.getBoundingClientRect()
+                return rect.top >= -rect.height
+            }
+
+            const handleScroll = () => {
+                checkCanvasVisibility()
+                if (isCanvasVisible) {
+                    renderer.setAnimationLoop(animate)
+                } else renderer.setAnimationLoop(null)
+            }
+            window.addEventListener('scroll', handleScroll)
+
             return () => {
-                cancelAnimationFrame(req)
+                renderer.setAnimationLoop(null)
                 renderer.dispose()
             }
         }
