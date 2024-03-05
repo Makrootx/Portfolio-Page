@@ -1,7 +1,7 @@
 import { Container, Heading, SimpleGrid } from '@chakra-ui/react'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
-import thumbCalculator from '../public/images/projectThumbSample.png'
+import thumbCalculator from '../public/images/CalculatorAI-thumbnail.png'
 import thumbJavaGame from '../public/images/projectThumbSample.png'
 import Layout from '../components/layouts/article'
 const Works = () => {

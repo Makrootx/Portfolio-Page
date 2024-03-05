@@ -19,9 +19,15 @@ const Work = () => {
                 </P>
                 <List ml={4} my={4}>
                     <ListItem>
-                        <Meta>Website</Meta>
-                        <Link onClick={() => router.push('https://google.com')}>
-                            https://google.com
+                        <Meta>GitHub URL</Meta>
+                        <Link
+                            onClick={() =>
+                                router.push(
+                                    'https://github.com/Makrootx/CalculatorAI'
+                                )
+                            }
+                        >
+                            https://github.com/Makrootx/CalculatorAI
                             <ExternalLinkIcon mx={2} />
                         </Link>
                     </ListItem>
@@ -31,11 +37,11 @@ const Work = () => {
                     </ListItem>
                     <ListItem>
                         <Meta>Stack</Meta>
-                        <span>WPF .Net, Tensorflow.Net</span>
+                        <span>WPF .Net Framework, Tensorflow.Net</span>
                     </ListItem>
                 </List>
                 <WorkImage
-                    src="/images/projectThumbSample.png"
+                    src="/images/CalculatorAI-thumbnail.png"
                     alt="Calculator AI"
                 />
             </Container>
