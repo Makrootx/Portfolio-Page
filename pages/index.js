@@ -114,8 +114,8 @@ const Page = () => {
                         Hobbies
                     </Heading>
                     <Paragraph>
-                        I like sports, programming algorithms, playing the
-                        guitar, editing in photoshop
+                        Sports, programming algorithms, playing the guitar,
+                        editing in photoshop
                     </Paragraph>
                 </Section>
                 <Section delay={0.3}>
