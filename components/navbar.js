@@ -74,9 +74,6 @@ const NavBar = props => {
                     <LinkItem href="/works" path={path}>
                         Works
                     </LinkItem>
-                    <LinkItem href="/posts" path={path}>
-                        Posts
-                    </LinkItem>
                 </Stack>
 
                 <Box flex={1} align="right">
@@ -96,12 +93,14 @@ const NavBar = props => {
                                 <NextLink href={'/works'} passHref>
                                     <MenuItem>Works</MenuItem>
                                 </NextLink>
-                                <NextLink href={'/posts'} passHref>
-                                    <MenuItem>Posts</MenuItem>
+                                <NextLink
+                                    href={
+                                        'https://github.com/Makrootx/Portfolio-Page'
+                                    }
+                                    passHref
+                                >
+                                    <MenuItem>View Source</MenuItem>
                                 </NextLink>
-                                <MenuItem href="https://google.com">
-                                    View Source
-                                </MenuItem>
                             </MenuList>
                         </Menu>
                     </Box>

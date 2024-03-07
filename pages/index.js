@@ -12,6 +12,7 @@ import {
     Icon
 } from '@chakra-ui/react'
 
+import { SectionHomepage } from '../components/section'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import { ChevronRightIcon } from '@chakra-ui/icons'
@@ -25,12 +26,13 @@ const Page = () => {
             <Container>
                 <Box
                     borderRadius="lg"
-                    bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+                    bg={'#68D39188'}
                     mb={6}
                     p={3}
                     align="center"
                 >
-                    Hello, I&apos;m a full-stack developer based in Poland!
+                    Hello, I&apos;m beginner full-stack developer based in
+                    Poland!
                 </Box>
                 <Box display={{ md: 'flex' }}>
                     <Box flexGrow={1}>
@@ -56,35 +58,38 @@ const Page = () => {
                             alt="Profile Image"
                             style={{
                                 boxShadow:
-                                    '0px 0px 0px 2px' +
-                                    useColorModeValue('#00000064', '#B2F5EA89')
+                                    '0px 0px 8px 2px' +
+                                    useColorModeValue('#00000064', '#B2F5EA77')
                             }}
                         />
                     </Box>
                 </Box>
-                <Section delay={0.1}>
+                <SectionHomepage delay={0.1}>
                     <Heading as="h3" variant="section-title">
-                        Works
+                        About
                     </Heading>
                     <Paragraph>
-                        Lorem ipsum is placeholder text commonly used in the
-                        graphic, print, and publishing industries for previewing
-                        layouts and visual mockups.Lorem ipsum is placeholder
-                        text commonly used in the graphic, print, and publishing
-                        industries for previewing layouts and visual mockups
-                        named <Link href="/works/myWork">Work</Link>.
+                        Maksym is an aspiring developer based in Poland, where
+                        he is currently pursuing his education at the
+                        university, focusing on programming. His enthusiasm for
+                        learning extends to exploring cutting-edge technologies
+                        and devising innovative solutions for various projects.
+                        With a fervent dedication to continuous improvement,
+                        Maksym thrives on tackling real-world challenges through
+                        his programming skills.{' '}
+                        <Link href="/works/myWork">Work</Link>.
                     </Paragraph>
-                    <Box align="center" my={4}>
+                    <Box align="center" mt={4}>
                         <NextLink href="/works">
                             <Button
                                 rightIcon={<ChevronRightIcon />}
                                 colorScheme="teal"
                             >
-                                My portfolio
+                                My works
                             </Button>
                         </NextLink>
                     </Box>
-                </Section>
+                </SectionHomepage>
                 <Section delay={0.2}>
                     <Heading as="h3" variant="section-title">
                         Bio
@@ -94,8 +99,14 @@ const Page = () => {
                         Born in Lutsk, Ukraine.
                     </BioSection>
                     <BioSection>
-                        <BioYear>2022</BioYear>
-                        Begined studies in Academi of Biała Podlaska
+                        <BioYear>2017</BioYear>
+                        Took courses in Lutsk CNTUM of creating application in
+                        C# and Python
+                    </BioSection>
+                    <BioSection>
+                        <BioYear>2022 to present</BioYear>
+                        Studies in Pope John Paul II University in Biala
+                        Podlaska
                     </BioSection>
                 </Section>
                 <Section delay={0.3}>
@@ -103,7 +114,8 @@ const Page = () => {
                         Hobbies
                     </Heading>
                     <Paragraph>
-                        I liked sport, programing, guitar, photoshop.
+                        Sports, programming algorithms, playing the guitar,
+                        editing in photoshop
                     </Paragraph>
                 </Section>
                 <Section delay={0.3}>

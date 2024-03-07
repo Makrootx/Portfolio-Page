@@ -1,6 +1,7 @@
 import { Heading, Box, Image, Link, Badge } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import { useRouter } from 'next/router'
+import styled from '@emotion/styled'
 
 export const Title = ({ children }) => {
     const router = useRouter()
@@ -28,3 +29,18 @@ export const Meta = ({ children }) => (
         {children}
     </Badge>
 )
+
+export const Feature = styled.p`
+    margin-left: 0.5rem;
+    text-align: justify;
+`
+
+export const FeatureSection = ({ children }) => {
+    return (
+        <>
+            <ChevronRightIcon />
+            {children}
+            <br />
+        </>
+    )
+}

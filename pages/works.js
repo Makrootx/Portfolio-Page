@@ -1,8 +1,8 @@
 import { Container, Heading, SimpleGrid } from '@chakra-ui/react'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
-import thumbCalculator from '../public/images/projectThumbSample.png'
-import thumbJavaGame from '../public/images/projectThumbSample.png'
+import thumbCalculator from '../public/images/CalculatorAI-thumbnail.png'
+import thumbJPlatformer from '../public/images/JPlatformer-thumbnail.png'
 import Layout from '../components/layouts/article'
 const Works = () => {
     return (
@@ -24,11 +24,11 @@ const Works = () => {
                     </Section>
                     <Section>
                         <WorkGridItem
-                            id="javagame"
+                            id="jplatformer"
                             title="Java Game"
-                            thumbnail={thumbJavaGame}
+                            thumbnail={thumbJPlatformer}
                         >
-                            A 2D Platformer Game writed on Java
+                            A 2D Platformer Game wrote on Java
                         </WorkGridItem>
                     </Section>
                 </SimpleGrid>
