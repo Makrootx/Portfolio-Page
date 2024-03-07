@@ -86,27 +86,27 @@ const PaneuropaWork = () => {
                 </List>
                 <WorkImage
                     src="/images/Paneuropa-thumbnail.png"
-                    alt="JPlatformer_image"
+                    alt="Paneuropa_image"
                 />
                 <WorkImage
                     src="/images/Paneuropa/Paneuropa3.png"
-                    alt="JPlatformer_image"
+                    alt="Paneuropa_image"
                 />
                 <WorkImage
                     src="/images/Paneuropa/Paneuropa.png"
-                    alt="JPlatformer_image"
+                    alt="Paneuropa_image"
                 />
                 <WorkImage
                     src="/images/Paneuropa/Paneuropa1.png"
-                    alt="JPlatformer_image"
+                    alt="Paneuropa_image"
                 />
                 <WorkImage
                     src="/images/Paneuropa/Paneuropa4.png"
-                    alt="JPlatformer_image"
+                    alt="Paneuropa_image"
                 />
                 <WorkImage
                     src="/images/Paneuropa/Paneuropa2.png"
-                    alt="JPlatformer_image"
+                    alt="Paneuropa_image"
                 />
             </Container>
         </Layout>
