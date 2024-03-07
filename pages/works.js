@@ -3,6 +3,7 @@ import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
 import thumbCalculator from '../public/images/CalculatorAI-thumbnail.png'
 import thumbJPlatformer from '../public/images/JPlatformer-thumbnail.png'
+import thumbPaneuropa from '../public/images/Paneuropa-thumbnail.png'
 import Layout from '../components/layouts/article'
 const Works = () => {
     return (
@@ -25,10 +26,19 @@ const Works = () => {
                     <Section>
                         <WorkGridItem
                             id="jplatformer"
-                            title="Java Game"
+                            title="JPlatformer"
                             thumbnail={thumbJPlatformer}
                         >
                             A 2D Platformer Game wrote on Java
+                        </WorkGridItem>
+                    </Section>
+                    <Section>
+                        <WorkGridItem
+                            id="paneuropa"
+                            title="Paneuropa Game"
+                            thumbnail={thumbPaneuropa}
+                        >
+                            An 2D Rouge-like game developed by 24 hours in Unity
                         </WorkGridItem>
                     </Section>
                 </SimpleGrid>
