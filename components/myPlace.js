@@ -116,7 +116,6 @@ const MyPlace = () => {
 
             const checkCanvasVisibility = () => {
                 isCanvasVisible = isElementInViewport(container)
-                console.log(isCanvasVisible)
             }
 
             const isElementInViewport = el => {
