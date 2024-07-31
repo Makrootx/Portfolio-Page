@@ -3,7 +3,8 @@ import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
 import thumbCalculator from '../public/images/CalculatorAI-thumbnail.png'
 import thumbJPlatformer from '../public/images/JPlatformer-thumbnail.png'
-import thumbPaneuropa from '../public/images/Paneuropa-thumbnail.png'
+import thumbPaneuropa from '../public/images/Paneuropa-thumbnaila.png'
+import thumbAICademia from '../public/images/AICademia-thumbnail.png'
 import Layout from '../components/layouts/article'
 const Works = () => {
     return (
@@ -39,6 +40,15 @@ const Works = () => {
                             thumbnail={thumbPaneuropa}
                         >
                             An 2D Rouge-like game developed by 24 hours in Unity
+                        </WorkGridItem>
+                    </Section>
+                    <Section>
+                        <WorkGridItem
+                            id="aicademia"
+                            title="AI Cademia"
+                            thumbnail={thumbAICademia}
+                        >
+                            A Web Educational-Game writed on React, C#
                         </WorkGridItem>
                     </Section>
                 </SimpleGrid>
