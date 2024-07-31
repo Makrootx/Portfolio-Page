@@ -1,2 +1,2 @@
 # Portfolio Page
- This this mine portfolio page where will be placed my projects and information about me
+ This is my portfolio page where my projects and information about me
