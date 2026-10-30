@@ -12,6 +12,9 @@
   "keywords": [],
   "author": "Maksym Boiko",
   "license": "MIT",
+  "engines": {
+    "node": "26.x"
+  },
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",
     "@chakra-ui/react": "^2.8.2",

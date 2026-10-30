@@ -9,16 +9,17 @@ import {
     Button,
     List,
     ListItem,
-    Icon
+    Icon,
+    Stack
 } from '@chakra-ui/react'
 
 import { SectionHomepage } from '../components/section'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
-import { ChevronRightIcon } from '@chakra-ui/icons'
-import { BioSection, BioYear } from '../components/bio'
+import { ChevronRightIcon, DownloadIcon } from '@chakra-ui/icons'
+import { SkillGroup, ExperienceItem } from '../components/skills'
 import Layout from '../components/layouts/article'
-import { IoLogoGithub, IoLogoInstagram, IoLogoFacebook } from 'react-icons/io5'
+import { IoLogoGithub, IoLogoLinkedin, IoMail } from 'react-icons/io5'
 
 const Page = () => {
     return (
@@ -31,15 +32,14 @@ const Page = () => {
                     p={3}
                     align="center"
                 >
-                    Hello, I&apos;m beginner full-stack developer based in
-                    Poland!
+                    Hello, I&apos;m a full-stack developer based in Poland!
                 </Box>
                 <Box display={{ md: 'flex' }}>
                     <Box flexGrow={1}>
                         <Heading as="h2" variant="page-title">
                             Maksym Boiko
                         </Heading>
-                        <p>Developer/Artist</p>
+                        <p>Full-Stack Developer · TypeScript · Node.js · React</p>
                     </Box>
                     <Box
                         flexShrink={0}
@@ -69,53 +69,206 @@ const Page = () => {
                         About
                     </Heading>
                     <Paragraph>
-                        Maksym is an aspiring developer based in Poland, where
-                        he is currently pursuing his education at the
-                        university, focusing on programming. His enthusiasm for
-                        learning extends to exploring cutting-edge technologies
-                        and devising innovative solutions for various projects.
-                        With a fervent dedication to continuous improvement,
-                        Maksym thrives on tackling real-world challenges through
-                        his programming skills.{' '}
-                        <Link href="/works/myWork">Work</Link>.
+                        Full-stack TypeScript developer with a backend focus. I
+                        build REST and real-time APIs with NestJS and
+                        PostgreSQL, ship them with Docker, and build web and
+                        cross-platform apps with React, Next.js, React Native
+                        and Ionic. I also work in modern C++ and have built a
+                        multi-tenant backend in C++20. Master&apos;s student in
+                        Computer Science at Warsaw University of Technology and
+                        four-time HackYeah participant.
                     </Paragraph>
-                    <Box align="center" mt={4}>
+                    <Stack
+                        direction={{ base: 'column', sm: 'row' }}
+                        justify="center"
+                        mt={4}
+                        spacing={3}
+                    >
                         <NextLink href="/works">
                             <Button
                                 rightIcon={<ChevronRightIcon />}
                                 colorScheme="teal"
+                                w="full"
                             >
                                 My works
                             </Button>
                         </NextLink>
-                    </Box>
+                        <Link
+                            href="/cv/Maksym_Boiko_CV.pdf"
+                            target="_blank"
+                            _hover={{ textDecoration: 'none' }}
+                        >
+                            <Button
+                                leftIcon={<DownloadIcon />}
+                                colorScheme="teal"
+                                variant="outline"
+                                w="full"
+                            >
+                                Download CV
+                            </Button>
+                        </Link>
+                    </Stack>
                 </SectionHomepage>
                 <Section delay={0.2}>
                     <Heading as="h3" variant="section-title">
-                        Bio
+                        Experience
                     </Heading>
-                    <BioSection>
-                        <BioYear>2005</BioYear>
-                        Born in Lutsk, Ukraine.
-                    </BioSection>
-                    <BioSection>
-                        <BioYear>2017</BioYear>
-                        Took courses in Lutsk CNTUM of creating application in
-                        C# and Python
-                    </BioSection>
-                    <BioSection>
-                        <BioYear>2022 to present</BioYear>
-                        Studies in Pope John Paul II University in Biala
-                        Podlaska
-                    </BioSection>
+                    <ExperienceItem
+                        role="Application Engineer"
+                        company="Heller Consult"
+                        period="June 2025 – Present"
+                    >
+                        <li>
+                            Designed a report generation engine with its own
+                            transformation language and evaluator, turning
+                            database data into Excel reports
+                        </li>
+                        <li>
+                            Develop data transformation pipelines that process
+                            and migrate road infrastructure data across
+                            PostgreSQL databases
+                        </li>
+                        <li>
+                            Build internal tools and maintain the databases
+                            behind production road data platforms
+                        </li>
+                    </ExperienceItem>
+                    <ExperienceItem
+                        role="Freelance Web Developer"
+                        company="Codecollider-tech"
+                        period="Oct 2025 – Feb 2026"
+                    >
+                        <li>
+                            Modernized a charity organization&apos;s React
+                            application, refactoring its UI and delivering new
+                            features
+                        </li>
+                        <li>
+                            Built and launched a multilingual website with
+                            online consultation booking, powered by TinaCMS
+                        </li>
+                    </ExperienceItem>
+                    <ExperienceItem
+                        role="Software Developer Intern"
+                        company="Heller Consult"
+                        period="Summers 2024 & 2025"
+                    >
+                        <li>
+                            Designed and built a desktop configuration app
+                            (React, Electron, PostgreSQL) that streamlines
+                            project setup
+                        </li>
+                    </ExperienceItem>
+                </Section>
+                <Section delay={0.25}>
+                    <Heading as="h3" variant="section-title">
+                        Skills
+                    </Heading>
+                    <SkillGroup
+                        core
+                        title="Core"
+                        skills={[
+                            'TypeScript',
+                            'Node.js',
+                            'NestJS',
+                            'React',
+                            'PostgreSQL',
+                            'Docker'
+                        ]}
+                    />
+                    <SkillGroup
+                        title="Backend"
+                        skills={[
+                            'Express',
+                            'REST',
+                            'WebSockets / Socket.IO',
+                            'JWT / Passport',
+                            'Swagger',
+                            'C++20 / Crow',
+                            'ASP.NET'
+                        ]}
+                    />
+                    <SkillGroup
+                        title="Frontend & mobile"
+                        skills={[
+                            'Next.js',
+                            'Vue',
+                            'React Native (Expo)',
+                            'Ionic / Capacitor',
+                            'Flutter',
+                            'TanStack Query',
+                            'Zustand',
+                            'Tailwind'
+                        ]}
+                    />
+                    <SkillGroup
+                        title="Databases"
+                        skills={[
+                            'PostGIS',
+                            'MySQL',
+                            'SQL',
+                            'TypeORM',
+                            'Prisma',
+                            'ODB / libpqxx'
+                        ]}
+                    />
+                    <SkillGroup
+                        title="DevOps & tools"
+                        skills={[
+                            'Docker Compose',
+                            'GitHub Actions',
+                            'Nginx',
+                            'LXD',
+                            'Linux',
+                            'Google Cloud',
+                            'CMake / vcpkg',
+                            'Git',
+                            'Bash'
+                        ]}
+                    />
+                    <SkillGroup
+                        title="Languages"
+                        skills={[
+                            'JavaScript',
+                            'Python',
+                            'C++',
+                            'C#',
+                            'Java',
+                            'SQL'
+                        ]}
+                    />
+                    <SkillGroup
+                        title="Spoken"
+                        skills={[
+                            'English B2',
+                            'Polish C1',
+                            'Ukrainian (native)',
+                            'Russian (native)'
+                        ]}
+                    />
+                </Section>
+                <Section delay={0.3}>
+                    <Heading as="h3" variant="section-title">
+                        Education
+                    </Heading>
+                    <ExperienceItem
+                        role="Master's, Computer Science"
+                        company="Warsaw University of Technology"
+                        period="Feb 2026 – Present"
+                    />
+                    <ExperienceItem
+                        role="Engineer, Computer Science"
+                        company="Akademia Bialska im. Jana Pawła II"
+                        period="Oct 2022 – Feb 2026"
+                    />
                 </Section>
                 <Section delay={0.3}>
                     <Heading as="h3" variant="section-title">
                         Hobbies
                     </Heading>
                     <Paragraph>
-                        Sports, programming algorithms, playing the guitar,
-                        editing in photoshop
+                        Sports, programming algorithms, hackathons, playing the
+                        guitar, editing in photoshop
                     </Paragraph>
                 </Section>
                 <Section delay={0.3}>
@@ -139,29 +292,26 @@ const Page = () => {
                         </ListItem>
                         <ListItem>
                             <Link
-                                href="https://www.instagram.com/maksum_boiko"
+                                href="https://www.linkedin.com/in/maksym-boiko-50855b443"
                                 target="_blank"
                             >
                                 <Button
                                     variant="ghost"
                                     colorScheme="teal"
-                                    leftIcon={<Icon as={IoLogoInstagram} />}
+                                    leftIcon={<Icon as={IoLogoLinkedin} />}
                                 >
-                                    @maksum_boiko
+                                    Maksym Boiko
                                 </Button>
                             </Link>
                         </ListItem>
                         <ListItem>
-                            <Link
-                                href="https://www.facebook.com/profile.php?id=100009912338526"
-                                target="_blank"
-                            >
+                            <Link href="mailto:maksym782@gmail.com">
                                 <Button
                                     variant="ghost"
                                     colorScheme="teal"
-                                    leftIcon={<Icon as={IoLogoFacebook} />}
+                                    leftIcon={<Icon as={IoMail} />}
                                 >
-                                    @Max Boiko
+                                    maksym782@gmail.com
                                 </Button>
                             </Link>
                         </ListItem>

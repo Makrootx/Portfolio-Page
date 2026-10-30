@@ -82,6 +82,11 @@ const MyPlace = () => {
 
             const controls = new OrbitControls(camera, renderer.domElement)
             controls.autoRotate = true
+            // no zoom, so the mouse wheel scrolls the page instead
+            controls.enableZoom = false
+            controls.enablePan = false
+            // let vertical swipes scroll the page on touch screens
+            renderer.domElement.style.touchAction = 'pan-y'
             controls.target = target
             setControls(controls)
             renderer.shadowMap.enabled = true
